@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -6,11 +7,23 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  color: #222;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .topo {
-  background-color: #626C3B;
-  color: #fff;
+  background-color: #3D481D; 
+  color: #ffffff;
   padding: 15px 30px;
 }
 
@@ -23,50 +36,63 @@ body {
   margin-top: 10px;
 }
 
-.link-item {
-  display: inline-block;
-  margin-right: 15px;
-  cursor: pointer;
-  color: #d1d8be;
+.links-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-/* Largura fixa: QUEBRA no celular gerando barra de rolagem horizontal */
+.link-item {
+  display: inline-block;
+  color: #ffffff; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-item:hover,
+.link-item:focus {
+  text-decoration: underline;
+}
+
 .corpo-pagina {
-  width: 1000px;
+  max-width: 1000px;
+  width: 90%;
   margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .conteudo-principal {
-  float: left;
-  width: 680px;
-  background: white;
+  flex: 1 1 640px;
+  background: #ffffff;
   padding: 25px;
   border-radius: 8px;
 }
 
 .barra-lateral {
-  float: right;
-  width: 260px;
-  background: white;
+  flex: 0 1 280px;
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
 }
 
 .foto-perfil {
   width: 100%;
+  height: auto;
   margin: 15px 0;
+  border-radius: 4px;
 }
 
 .titulo-post {
   font-size: 26px;
   font-weight: bold;
-  color: #222;
+  color: #111111;
 }
 
-/* Falha WCAG: Contraste insuficiente com fundo branco */
 .subtitulo-autor {
   font-size: 13px;
-  color: #aaa;
+  color: #4A4A4A;
   margin-bottom: 15px;
 }
 
@@ -74,30 +100,40 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin: 20px 0 10px 0;
-  color: #626C3B;
+  color: #3D481D;
 }
-
-/* Falha WCAG: Cinza claro difícil de ler */
 .texto {
   line-height: 1.6;
-  color: #888;
+  color: #333333;
 }
 
-/* Falha WCAG: Amarelo com texto branco tem baixo contraste */
 .botao-interativo {
   display: inline-block;
-  background-color: #E8AF3B;
+  background-color: #8C5B00; 
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 12px 20px;
   margin-top: 20px;
+  border: none;
   border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
+.botao-interativo:hover,
+.botao-interativo:focus {
+  background-color: #664200;
+  outline: 2px solid #000;
+}
+
+.mensagem-escondida {
+  display: none;
+  margin-top: 15px;
+}
+
 .rodape {
-  clear: both;
-  background: #333;
-  color: #aaa;
+  background: #1a1a1a;
+  color: #ffffff; 
   text-align: center;
   padding: 20px;
   margin-top: 40px;

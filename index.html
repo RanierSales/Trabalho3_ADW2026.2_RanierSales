@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog pessoal de Jean Bertrand, com informações sobre sua trajetória e curiosidades.">
-
-    <title>Pagina</title>
-
+    <meta name="description" content="Blog pessoal de Ranier Sales, com informações sobre sua trajetória, projetos e curiosidades.">
+    <title>Blog Pessoal - Ranier Sales</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="topo">
-        <div class="nome-site">Meu Blog Pessoal</div>
-        <div class="links-menu">
-            <div class="link-item" onclick="alert('indo para o inicio')">INICIO</div>
-            <div class="link-item" onclick="alert('indo para as trajetórias')">Trajetória</div>
-            <div class="link-item" onclick="alert('indo para as curiosidades')">Curiosidades</div>
-        </div>
-    </div>
+
+    <a href="#main-content" class="sr-only">Pular para o conteúdo principal</a>
+
+    <header class="topo">
+        <h1 class="nome-site">Meu Blog Pessoal</h1>
+        <nav class="links-menu" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio" class="link-item">Início</a></li>
+                <li><a href="#trajetoria" class="link-item">Trajetória</a></li>
+                <li><a href="#curiosidades" class="link-item">Curiosidades</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="corpo-pagina">
-        <div class="conteudo-principal">
-            <div class="post-perfil">
-                <div class="titulo-post">Olá, eu sou o Ranier Sales!</div>
-                <div class="subtitulo-autor">Publicado em 07/09/2026 por Ranier</div>
-            </div>
-        </div>
+        <main id="main-content" class="conteudo-principal">
+            <article class="post-perfil">
+                <header>
+                    <h2 class="titulo-post">Olá, eu sou o Ranier Sales!</h2>
+                    <p class="subtitulo-autor">
+                        Publicado em <time datetime="2026-09-07">07/09/2026</time> por <span>Ranier Sales</span>
+                    </p>
+                </header>
+
+                <section id="trajetoria">
+                    <h3 class="titulo-secao">Minha Trajetória</h3>
+                    <p class="texto">
+                        Sou estudante de Ciência da Computação na Universidade Federal de Roraima (UFRR). Tenho grande interesse na área de arquitetura e desenvolvimento web, além de sistemas de automação e análise de dados.
+                    </p>
+                </section>
+
+                <section id="curiosidades">
+                    <h3 class="titulo-secao">Curiosidades e Projetos</h3>
+                    <p class="texto">
+                        Além da rotina acadêmica, gosto de automatizar fluxos de trabalho no Google Workspace, desenvolver scripts customizados e acompanhar partidas de futebol.
+                    </p>
+                    
+                    <button id="btn-mensagem" class="botao-interativo" aria-expanded="false" aria-controls="mensagem-secreta">
+                        Ver mensagem especial
+                    </button>
+                    
+                    <p id="mensagem-secreta" class="texto mensagem-escondida" aria-hidden="true">
+                        Bem-vindo ao meu projeto refatorado focado em acessibilidade e performance web!
+                    </p>
+                </section>
+            </article>
+        </main>
+
+        <aside class="barra-lateral" aria-label="Informações do autor">
+            <h3 class="titulo-secao">Perfil</h3>
+            <img src="perfil.jpg" alt="Foto de perfil de Ranier Sales" class="foto-perfil" width="260" height="260" loading="lazy">
+            <p class="texto">Desenvolvedor e graduando em Ciência da Computação na UFRR.</p>
+        </aside>
     </div>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Ranier Sales. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
