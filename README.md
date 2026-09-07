@@ -1,0 +1,1 @@
+# Trabalho3_ADW2026.2_RanierSales
